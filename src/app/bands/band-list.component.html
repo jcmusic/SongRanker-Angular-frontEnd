@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="card container-fluid">
+        <div class="filters">
+            <a class="btn btn-primary">My Bands</a>
+            <a class="btn btn-primary">All Bands </a>
+            <label >filter:</label>
+            <input type = "text" class="" (input)="filterChange($event)"/>
+            <!-- <span>{{filter}}</span> -->
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+    <!-- <a>{{selectedBand.Name}}</a> -->
+</div>
+    <table class="bands card">
+        <li class="bands-item card-item" *ngFor="let band of getFilteredBands()">
+            <app-band-detail [band]="band"></app-band-detail>
+        </li>
+    </table>
+</div>
